@@ -5,7 +5,8 @@ public class Nombree {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         String StringValue = input.nextLine();
-        String[] Values = StringValue.trim().split(",");
+
+        String[] Values = StringValue.trim().split(" {2}");
         String[] Vvalues;
         for(String Value : Values){
             Vvalues = Value.trim().split(" ");

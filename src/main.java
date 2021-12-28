@@ -14,8 +14,10 @@ public class main {
             System.out.println("********************");
             System.out.print("Entrer a pour inserer\n");
             System.out.print("Entrer s pour suprimer\n");
+            System.out.println("Entrer f pour afficher tt la table");
             System.out.print("Entrer q pour quiter\n");
             System.out.println("********************");
+            System.out.print("Votre choix est: ");
             Scanner scanner = new Scanner(System.in);
             choix = scanner.nextLine();
             switch (choix) {
@@ -34,15 +36,13 @@ public class main {
                     tableau.supprimer(valeur);
                     break;
                 }
+                case "f": System.out.println(tableau); break;
                 case "q":
                     break;
                 default:
                     throw new IllegalStateException("Unexpected value: " + choix);
             }
-            System.out.print("Voulez vous continuez? [q] si non: ");
-            Scanner scannerrr = new Scanner(System.in);
-            valeurr = scanner.nextLine();
-        } while (!Objects.equals(valeurr, "q"));
+        } while ( !choix.equals("q"));
 
     }
 }
