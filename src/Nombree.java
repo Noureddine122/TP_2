@@ -1,23 +1,16 @@
 import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Nombree {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         String StringValue = input.nextLine();
-
-        String[] Values = StringValue.trim().split(" {2}");
-        String[] Vvalues;
+        String[] Values = StringValue.trim().split(",");
         for(String Value : Values){
-            Vvalues = Value.trim().split(" ");
-            System.out.println(nbDecimal(Double.parseDouble(Vvalues[0]),Integer.parseInt(Vvalues[1])));
+            ParseNumbers number = new ParseNumbers(0,0);
+            number.ParsingFromTab(Value);
+            System.out.println(number.nbDecimal());
         }
-    }
-    public static double nbDecimal(Double d, int nbDecimal) {
-        StringBuilder n = new StringBuilder("0.");
-        n.append("0".repeat(Math.max(0, nbDecimal)));
-        DecimalFormat df = new DecimalFormat(n.toString());
-
-        return Double.parseDouble(df.format(d));
     }
 }
