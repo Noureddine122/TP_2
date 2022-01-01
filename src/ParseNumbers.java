@@ -5,9 +5,9 @@ public class ParseNumbers {
     private static double number;
     private static int format;
 
-    public ParseNumbers(double number, int format) {
-        ParseNumbers.number = number;
-        ParseNumbers.format = format;
+    public ParseNumbers() {
+        number = 0;
+        format=0;
     }
 
     public void ParsingFromTab(String value) {

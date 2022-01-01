@@ -8,7 +8,7 @@ public class Nombree {
         String StringValue = input.nextLine();
         String[] Values = StringValue.trim().split(",");
         for(String Value : Values){
-            ParseNumbers number = new ParseNumbers(0,0);
+            ParseNumbers number = new ParseNumbers();
             number.ParsingFromTab(Value);
             System.out.println(number.nbDecimal());
         }
