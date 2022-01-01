@@ -27,4 +27,11 @@ public class ParseNumbers {
         DecimalFormat df = new DecimalFormat("0." + "0".repeat(Math.max(0, format)));
         return Double.parseDouble(df.format(number));
     }
+
+    @Override
+    public String toString() {
+        String result = "";
+        result += "{"+number + "} avec format {"+ format +"} donne : "+ nbDecimal();
+        return result;
+    }
 }

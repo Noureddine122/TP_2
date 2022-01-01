@@ -1,5 +1,3 @@
-import java.text.DecimalFormat;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Nombree {
@@ -10,7 +8,7 @@ public class Nombree {
         for(String Value : Values){
             ParseNumbers number = new ParseNumbers();
             number.ParsingFromTab(Value);
-            System.out.println(number.nbDecimal());
+            System.out.println(number);
         }
     }
 }
