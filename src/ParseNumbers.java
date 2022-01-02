@@ -27,7 +27,7 @@ public class ParseNumbers {
                 }
             }
         }catch(Exception e){
-            System.out.println("Error during parsing " +e.getMessage());
+            System.out.println("Error during parsing: " +e.getMessage() + " Are you sure it was a [double int] ?!");
             Assert.fail("Respectez Syntaxe s'il vous plais");
         }
     }
