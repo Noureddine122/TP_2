@@ -1,3 +1,5 @@
+import org.junit.Assert;
+
 import java.text.DecimalFormat;
 import java.util.Objects;
 
@@ -11,16 +13,22 @@ public class ParseNumbers {
     }
 
     public void ParsingFromTab(String value) {
-        String[] parts = value.trim().split(" ");
-        number = Double.parseDouble(parts[0]);
-        int i = 1;
-        while (i < parts.length) {
-            if(Objects.equals(parts[i], "")){
-                i++;
-            }else{
-                format = Integer.parseInt(parts[i]);
-                break;
+        try{
+
+            String[] parts = value.trim().split(" ");
+            number = Double.parseDouble(parts[0]);
+            int i = 1;
+            while (i < parts.length) {
+                if(Objects.equals(parts[i], "")){
+                    i++;
+                }else{
+                    format = Integer.parseInt(parts[i]);
+                    break;
+                }
             }
+        }catch(Exception e){
+            System.out.println("Error during parsing " +e.getMessage());
+            Assert.fail("Respectez Syntaxe s'il vous plais");
         }
     }
     public double nbDecimal() {

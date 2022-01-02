@@ -3,7 +3,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class TriSimple {
-    private int[] tabInt;
+    private final int[] tabInt;
     private int nb_elements_maxx;
     private int nb_elements = 0;
 
